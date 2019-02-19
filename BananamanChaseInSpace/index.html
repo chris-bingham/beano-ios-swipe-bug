@@ -99,6 +99,11 @@
       jQuery(document).ready(function() {
         // Create new runtime using the c2canvas
         cr_createRuntime("c2canvas");
+
+        document.addEventListener("touchmove", function(e) {
+          console.log("touchmove");
+          e.preventDefault();
+        });
       });
 
       // Pause and resume on page becoming visible/invisible
