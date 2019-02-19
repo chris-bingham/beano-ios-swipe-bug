@@ -96,14 +96,15 @@
 
     <script>
       // Start the Construct 2 project running on window load.
+      console.log("hi");
+      document.addEventListener("touchmove", function(e) {
+        console.log("touchmove");
+        e.preventDefault();
+      });
+
       jQuery(document).ready(function() {
         // Create new runtime using the c2canvas
         cr_createRuntime("c2canvas");
-        console.log("hi");
-        document.addEventListener("touchmove", function(e) {
-          console.log("touchmove");
-          e.preventDefault();
-        });
       });
 
       // Pause and resume on page becoming visible/invisible
